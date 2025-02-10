@@ -34,9 +34,10 @@ const setupProxy = (path, url) => {
 
 setupProxy("todos", process.env.TODO_URL);
 setupProxy("posts", process.env.POST_URL);
+setupProxy("users", process.env.USER_URL);
 
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3030;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

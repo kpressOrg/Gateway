@@ -1,18 +1,7 @@
 services:
-  kpress-app-post-service:
+  kpress-app-gateway-service:
     build:
       context: .
       dockerfile: Dockerfile.dev
     ports:
-      - "3031:3031"
-    depends_on:
-      - kpress-db-post
-
-  kpress-db-post:
-    image: postgres:latest
-    environment:
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
-      POSTGRES_DB: mydb
-    ports:
-      - "5431:5432"
+      - "3030:3030"
